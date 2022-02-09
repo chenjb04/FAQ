@@ -153,6 +153,23 @@ def gen_rand_str(length):
 print(gen_rand_str(8))
 ```
 
+## python zipfile 处理中文乱码问题
+
+```python
+import zipfile
+
+zip_src = "要解压的zip文件路径"
+
+with zipfile.ZipFile(zip_src) as fz:
+    for file in fz.infolist():
+        try:
+            file.filename = file.filename.encode("cp437").decode("gbk")
+        except:
+            file.filename = file.filename.encode("utf-8").decode("utf-8")
+        
+        fz.extract(file, "要解压到的路径")
+```
+
 # sqlalchemy
 
 ## sqlalchemy开启事务
