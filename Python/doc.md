@@ -170,6 +170,52 @@ with zipfile.ZipFile(zip_src) as fz:
         fz.extract(file, "要解压到的路径")
 ```
 
+## python 时间字符串转换为时间戳
+
+```python
+import time
+
+
+def str_to_timestamp(str_time, time_format="%Y-%m-%d %H:%M:%S"):
+    """
+    字符串时间转换为时间戳
+    @param str_time: 字符串时间
+    @param time_format: 字符串时间格式
+    @return:
+    """
+    try:
+        time_array = time.strptime(str_time, time_format)
+        return int(time.mktime(time_array)) * 1000
+    except ValueError:
+        raise
+
+
+print(str_to_timestamp("2022-2-11 17:25:36"))
+```
+
+## python 时间戳转换为时间字符串
+
+```python
+import datetime
+
+
+def timestamp_to_str(timestamp, time_format="%Y-%m-%d %H:%M:%S"):
+    """
+    字符串时间转换为时间戳
+    @param timestamp: 时间戳
+    @param time_format: 字符串时间格式
+    @return:
+    """
+    try:
+        datetime_type = datetime.datetime.fromtimestamp(timestamp // 1000)
+        return datetime_type.strftime(time_format)
+    except ValueError:
+        raise
+
+
+print(timestamp_to_str(1644571536000))
+```
+
 # sqlalchemy
 
 ## sqlalchemy开启事务
