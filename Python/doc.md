@@ -1,3 +1,5 @@
+[toc]
+
 # Python
 
 ## 递归处理list 成为树形json
