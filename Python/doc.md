@@ -7,6 +7,7 @@
   - [python zipfile 处理中文乱码问题](#python-zipfile-处理中文乱码问题)
   - [python 时间字符串转换为时间戳](#python-时间字符串转换为时间戳)
   - [python 时间戳转换为时间字符串](#python-时间戳转换为时间字符串)
+  - [Python 获取当前文件所在绝对路径目录](#python-获取当前文件所在绝对路径目录)
 - [sqlalchemy](#sqlalchemy)
   - [sqlalchemy开启事务](#sqlalchemy开启事务)
 # Python
@@ -225,6 +226,14 @@ def timestamp_to_str(timestamp, time_format="%Y-%m-%d %H:%M:%S"):
 
 
 print(timestamp_to_str(1644571536000))
+```
+## Python 获取当前文件所在绝对路径目录
+```python
+os.path.abspath(os.path.dirname(__file__))
+
+os.getcwd()
+
+os.path.dirname(os.path.abspath(__file__))
 ```
 
 # sqlalchemy
