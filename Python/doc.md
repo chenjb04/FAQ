@@ -1,5 +1,14 @@
-[toc]
-
+- [Python](#python)
+  - [递归处理list 成为树形json](#递归处理list-成为树形json)
+  - [列表字典去重](#列表字典去重)
+  - [找出list中重复元素](#找出list中重复元素)
+  - [求两个list的交集/并集/差集](#求两个list的交集并集差集)
+  - [获取指定长度随机字符串](#获取指定长度随机字符串)
+  - [python zipfile 处理中文乱码问题](#python-zipfile-处理中文乱码问题)
+  - [python 时间字符串转换为时间戳](#python-时间字符串转换为时间戳)
+  - [python 时间戳转换为时间字符串](#python-时间戳转换为时间字符串)
+- [sqlalchemy](#sqlalchemy)
+  - [sqlalchemy开启事务](#sqlalchemy开启事务)
 # Python
 
 ## 递归处理list 成为树形json
@@ -23,7 +32,7 @@ list_data = [
 def get_list(pid):
     data = []
 
-    for x in list_data:
+    for x in list_data: 
         if x['pid'] == pid:
             next_pid = x['id']
             x['children'] = get_list(next_pid)
