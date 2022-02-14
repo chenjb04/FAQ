@@ -11,6 +11,7 @@
 - [sqlalchemy](#sqlalchemy)
   - [sqlalchemy开启事务](#sqlalchemy开启事务)
   - [sqlalchemy 连接url](#sqlalchemy-连接url)
+  - [sqlalchemy url密码中包含特殊字符处理](#sqlalchemy-url密码中包含特殊字符处理)
 # Python
 
 ## 递归处理list 成为树形json
@@ -277,4 +278,11 @@ session.commit()
 'sqlite:////absolute/path/to/foo.db'
 # windows
 'sqlite:///C:\\path\\to\\foo.db'
+```
+## sqlalchemy url密码中包含特殊字符处理
+```python
+from urllib.parse import quote_plus
+
+password = "123@456"
+quote_plus(password)
 ```
