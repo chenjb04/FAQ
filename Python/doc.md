@@ -10,6 +10,7 @@
   - [Python 获取当前文件所在绝对路径目录](#python-获取当前文件所在绝对路径目录)
 - [sqlalchemy](#sqlalchemy)
   - [sqlalchemy开启事务](#sqlalchemy开启事务)
+  - [sqlalchemy 连接url](#sqlalchemy-连接url)
 # Python
 
 ## 递归处理list 成为树形json
@@ -252,3 +253,28 @@ with db.session.begin_nested():
 session.commit()
 ```
 
+## sqlalchemy 连接url
+```python
+# mysql
+# default
+'mysql://user:password@ip:port/database'
+# mysqlclient 
+'mysql+mysqldb://user:password@ip:port/database'
+# pymysql
+'mysql+pymysql://user:password@ip:port/database'
+
+
+# pgsql
+# default
+'postgresql://user:password@ip:port/database'
+# psycopg2
+'postgresql+psycopg2://user:password@ip:port/database'
+# pg8000
+'ostgresql+pg8000://user:password@ip:port/database'
+
+# sqlite
+# linux
+'sqlite:////absolute/path/to/foo.db'
+# windows
+'sqlite:///C:\\path\\to\\foo.db'
+```
