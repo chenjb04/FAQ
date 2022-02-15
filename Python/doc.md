@@ -12,6 +12,7 @@
   - [sqlalchemy开启事务](#sqlalchemy开启事务)
   - [sqlalchemy 连接url](#sqlalchemy-连接url)
   - [sqlalchemy url密码中包含特殊字符处理](#sqlalchemy-url密码中包含特殊字符处理)
+  - [flask_sqlalchemy记录慢查询sql语句日志](#flask_sqlalchemy记录慢查询sql语句日志)
 # Python
 
 ## 递归处理list 成为树形json
@@ -285,4 +286,35 @@ from urllib.parse import quote_plus
 
 password = "123@456"
 quote_plus(password)
+```
+## flask_sqlalchemy记录慢查询sql语句日志
+```python
+from flask_sqlalchemy import get_debug_queries
+
+
+@app.after_request
+def after_request(response):
+    """
+    慢查询sql语句日志记录
+        query属性说明
+            statement：sql语句
+            parameters： sql语句参数
+            duration：查询持续的时间 单位秒
+            context: 在源码中所处位置的字符串
+            start_time: 查询时的时间
+            end_time: 查询结果时的时间
+        慢查询配置：
+            SQLALCHEMY_RECORD_QUERIES = True
+            SLOW_TIMEOUT = 0.5
+    :param response: 响应对象
+    :return: 响应对象
+    """
+    for query in get_debug_queries():
+        if query.duration >= current_app.config["SLOW_TIMEOUT"]:
+            log.warning(
+                "slow query: {}, parmas: {}, duration: {}, context:{}".format(
+                    query.statement, query.parameters, query.duration, query.context
+                )
+            )
+    return response
 ```
