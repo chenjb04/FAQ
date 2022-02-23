@@ -1,5 +1,7 @@
 - [time_utils](#time_utils)
   - [convert_time.py 时间相互转换](#convert_timepy-时间相互转换)
+- [ip utils](#ip-utils)
+  - [verify_ip.py 验证ip](#verify_ippy-验证ip)
 # time_utils
 
 ```reStructuredText
@@ -17,4 +19,20 @@
 - timestamp_to_datetime 时间戳转换为datetime
 - datetime_to_str datetime转换为时间字符串
 - datetime_to_timestamp datetime转换为时间戳
+
+# ip utils
+
+```reStructuredText
+ip处理
+```
+## [verify_ip.py](./ip_utils/verify_ip.py) 验证ip
+
+- is_ipv4 判断是否为ipv4地址
+- is_ipv6 判断是否为ipv6地址
+- is_ipv4_cidr 判断是否为ipv4断
+- is_ipv6_cidr 判断是否为ipv6段
+- is_ipv4_range 验证字符串是否为ipv4范围
+- is_ipv6_range 验证字符串是否为ipv6范围
+- ip_in_cidr  判断ip是否属于一个网段
+- is_loopback 判断ip是否为本地回环地址
 
