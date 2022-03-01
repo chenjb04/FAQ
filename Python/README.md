@@ -4,6 +4,8 @@
   - [verify_ip.py 验证ip](#verify_ippy-验证ip)
 - [logs](#logs)
   - [log.py logging 二次封装 支持按日期分割日志、按天分割日志,支持多进程安全](#logpy-logging-二次封装-支持按日期分割日志按天分割日志支持多进程安全)
+- [captcha](#captcha)
+  - [captcha.py 生成图片验证码](#captchapy-生成图片验证码)
 # time_utils
 
 ```reStructuredText
@@ -45,3 +47,9 @@ ip处理
 日志相关操作
 ```
 ## [log.py](./logs/log.py) logging 二次封装 支持按日期分割日志、按天分割日志,支持多进程安全
+
+# captcha
+```text
+图片验证码
+```
+## [captcha.py](./captcha/captcha.py) 生成图片验证码
