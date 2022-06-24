@@ -6,14 +6,21 @@ python ip格式验证
 python验证ip格式，包含ipv4，ipv6格式，ip范围，ip段等验证
 
 .. note::
-    需要引用以下包
-    import IPy
-    from ipaddress import IPv4Address
-    from ipaddress import IPv4Network
-    from ipaddress import IPv6Address
-    from ipaddress import IPv6Network
-    from ipaddress import AddressValueError
-    from ipaddress import NetmaskValueError
+        需要引用以下包
+        
+        import IPy
+        
+        from ipaddress import IPv4Address
+        
+        from ipaddress import IPv4Network
+        
+        from ipaddress import IPv6Address
+        
+        from ipaddress import IPv6Network
+        
+        from ipaddress import AddressValueError
+        
+        from ipaddress import NetmaskValueError
 
 
 验证是否为ipv4地址
