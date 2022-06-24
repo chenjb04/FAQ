@@ -17,7 +17,7 @@ xxxxxx
     :maxdepth: 2
     :glob:
     
-    python/index
+    Python/index
 
 Indices and tables
 ==================
