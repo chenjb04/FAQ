@@ -3,21 +3,6 @@ python时间相互转换
 
 .. code-block:: python
 
-    try:
-        f = open('/path/to/file', 'r')
-        print(f.read())
-    finally:
-        if f:
-            f.close()
-
-    with open('/path/to/file', 'r') as f:
-        print(f.read())
-
-    f = open('/Users/michael/gbk.txt', 'r', encoding='gbk', errors='ignore')
-
-
-.. code-block:: python
-
      import typing as t
      import time
      import datetime
