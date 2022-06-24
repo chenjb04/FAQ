@@ -4,12 +4,12 @@ python时间相互转换
 .. code-block:: python
      :linenos:
     
-    import typing as t
-    import time
-    import datetime
-    
-    
-    def str_to_timestamp(str_time: str, time_format: str = "%Y-%m-%d %H:%M:%S") -> int:
+     import typing as t
+     import time
+     import datetime
+
+
+     def str_to_timestamp(str_time: str, time_format: str = "%Y-%m-%d %H:%M:%S") -> int:
         """
         时间字符串转换为13位时间戳
         :param str_time: 时间字符串
