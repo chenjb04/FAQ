@@ -1,2 +1,9 @@
+python
+=================================
 
-hello word
+.. toctree::
+   :maxdepth: 2
+   :caption: Contents:
+
+   python/index
+   about
