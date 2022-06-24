@@ -17,8 +17,7 @@ python时间相互转换
 
 
 .. code-block:: python
-     :linenos:
-    
+
      import typing as t
      import time
      import datetime
