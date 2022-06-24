@@ -6,3 +6,5 @@ python
     :glob:
     
     python/index
+Indices and tables
+==================
