@@ -1,5 +1,14 @@
+==========
 python
-=================================
+==========
+
+.. include:: _version.inc
+
+前言
+----
+
+xxxxxx
+
 
 目录
 ----
@@ -9,5 +18,10 @@ python
     :glob:
     
     python/index
+
 Indices and tables
 ==================
+
+* :ref:`genindex`
+* :ref:`modindex`
+* :ref:`search`
