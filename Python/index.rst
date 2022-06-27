@@ -12,4 +12,5 @@ Python
 
     time_utils/index
     ip_utils/index
+    logs/index
 
