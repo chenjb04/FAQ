@@ -6,6 +6,7 @@ python logging模块使用
 python logging模块二次封装 支持按日期分割日志、按天分割日志,支持多进程安全
 
 .. code-block:: python
+
     import logging
     import os
     import sys
