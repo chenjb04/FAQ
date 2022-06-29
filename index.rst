@@ -18,6 +18,7 @@ xxxxxx
     :glob:
     
     Python/index
+    python_craftsman/index
 
 Indices and tables
 ==================
