@@ -12,3 +12,4 @@ Python 编程经验总结
     :numbered: 2
 
     variable/index
+    loop/index
