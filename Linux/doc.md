@@ -77,3 +77,15 @@ tar zxvf /source/kernel.tgz -C /source/linux-2.6.29
 ```bash
 nohup python -m SimpleHTTPServer 8080 &
 ```
+# 查看当前目录下的各个文件夹大小
+```bash
+du -h --max-depth=1 /root
+```
+# 查看系统占用大小前10的文件
+```bash
+du -hsx * | sort -rh | head -10
+```
+# 查看某个目录下占用大小前10的文件
+```bash
+du -ah /root | sort -n -r | head -n 10
+```
