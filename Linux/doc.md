@@ -60,6 +60,11 @@ sudo yum-config-manager \
 sudo systemctl start docker
 ```
 
+# docker启动所有容器
+```bash
+docker start $(docker ps -a | awk '{ print $1}' | tail -n +2)
+```
+
 # tar解压指定目录
 
 ```bash
@@ -68,3 +73,7 @@ tar zxvf test.tgz -C 指定目录
 tar zxvf /source/kernel.tgz -C /source/linux-2.6.29
 ```
 
+# nohup后台运行
+```bash
+nohup python -m SimpleHTTPServer 8080 &
+```
