@@ -98,6 +98,14 @@ print(get_list(0))
 ]
 ```
 
+## 启动web服务
+```python
+# python2启动web服务
+python -m SimpleHTTPServer 8080
+# python3启动web服务
+python3 -m http.server 8080
+```
+
 ## 列表字典去重
 
 ```python
