@@ -89,3 +89,17 @@ du -hsx * | sort -rh | head -10
 ```bash
 du -ah /root | sort -n -r | head -n 10
 ```
+# 清理指定目录下n天前不使用的目录和文件
+```bash
+find /tmp -mtime +3 -exec rm -rf {} \;
+```
+# 修改指定网卡mac地址
+```bash
+
+# 关闭网卡
+ifconfig eth1 down
+# 修改mac地址
+ifconfig eth1 hw ether 98:29:A6:56:56:33
+# 重启网卡
+ifconfig eth1
+```
